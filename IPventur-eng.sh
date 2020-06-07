@@ -21,7 +21,7 @@ command -v nmap >/dev/null 2>&1 || { echo >&2 "I require nmap but it's not insta
 echo Program nmap is installed!
 echo
 echo
-echo "Overview activ network systems:"
+echo "Overview active network systems:"
 echo "(to get MAC addresses be in the same search network root)"
 echo "--------------------------------------------------------------"
 echo
