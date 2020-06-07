@@ -2,6 +2,7 @@
 # IPventur.sh
 # need root rights, fping und nmap
 # updated: 23.05.2020 nwoeske origin: Linux-User
+# Version: 0.5
 #
 # Bei Aufruf ohne Parameter abbrechen
 clear
@@ -22,8 +23,8 @@ echo "Programm nmap ist vorhanden!"
 echo 
 echo
 echo "Übersicht aktiver Netzwerkteilnehmer:"
-echo "(für MAC Adressen: root im selben Netzwerk)"
-echo "-------------------------------------------------------"
+echo "(für MAC Adressen: als root/sudo im selben Netzwerk starten)"
+echo "------------------------------------------------------------"
 echo
 echo
 datum=$(date +%d.%m.%Y-%H:%M:%S)
@@ -41,7 +42,7 @@ for k in $(fping -aq -g $1); do
 	echo "wird untersucht: $k"
 	echo "Aktiv: $k" >> lanliste-$netz.txt
 	nmap -n -sP $k | awk '/Nmap scan report for/{printf $5;}/MAC Address:/{print " => "$3;}' | sort >> lanliste-$netz.txt
-	nmap $k | grep -B1 open >> lanliste-$netz.txt
+	nmap -A -T5 $k | grep -B1 open >> lanliste-$netz.txt
 	echo "---------------------------------------------------" >> lanliste-$netz.txt
 done
 echo "-------------------------------------------------------"
