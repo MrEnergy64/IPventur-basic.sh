@@ -1,5 +1,5 @@
 # IPventur.sh
-IP collector script for beginners
+IP collector script for beginners.
 This little helping tool, collects IP addresses and open ports with nmap and fping (need to be installed).
 to start the tool and invest MAC addresses as well:
 
