@@ -9,25 +9,25 @@ The script will check first if nmap and fping available, and when yes, it will s
 
 -------------------------------------------------------                       
 -------------------------------------------------------                       
-                                                                              
+
 Program fping is installed!                                                   
-                                                                              
-Program nmap is installed!                                                    
-                                                                              
-                                                                              
-Overview activ network systems:                                               
-(to get MAC addresses be in the same search network root)                     
---------------------------------------------------------------                
-                                                                              
-Start: 07.06.2020-12:56:01 Net/IP = 192.168.222.0/24                          
-                                                                              
--------------------------------------------------------                       
-scanning...: 192.168.222.1                                                    
-scanning...: 192.168.222.64                                                   
-scanning...: 192.168.222.72                                                   
--------------------------------------------------------                       
-                                                                              
-End: 07.06.2020-12:56:01    
+
+Program nmap is installed!
+                                                    
+
+Overview activ network systems:
+(to get MAC addresses be in the same search network root)
+--------------------------------------------------------------
+
+Start 07.06.2020-12:56:01 Net/IP = 192.168.222.0/24                          
+
+-------------------------------------------------------
+scanning...: 192.168.222.1                       
+scanning...: 192.168.222.64
+scanning...: 192.168.222.72
+-------------------------------------------------------
+
+End: 07.06.2020-12:56:01
 
 At the end you will have a text file with your investigations:
 
