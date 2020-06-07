@@ -68,7 +68,7 @@ Aktiv: 10.0.222.4
 10.0.222.4 => 9C:5C:8E:D3:8A:A0
 <omitted>
 
-Feel free to change the nmap parameters with your own wishes.
+Feel free to change the nmap parameters with your own wishes!
 
 Happy collecting!
 
