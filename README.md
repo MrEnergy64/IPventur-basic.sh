@@ -3,9 +3,11 @@ IP collector script for beginners.
 This little helping tool, collects IP addresses and open ports with nmap and fping (need to be installed).
 To start the tool and invest MAC addresses as well:
 
+chmod +x IPventur-eng.sh (or chmod +x IPventur-ger.sh)
+
 sudo ./IPventur-eng.sh 192.168.1.0/24 <=network example (German version IPventur-ger.sh)
 
-The script will check first if nmap and fping available, and when yes, it will starts with the investigation.
+The script will check first, if nmap and fping available, and when yes, it will starts with the investigation.
 
 Feel free to change the nmap parameters with your own wishes!
 
