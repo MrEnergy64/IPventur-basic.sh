@@ -2,6 +2,7 @@
 # IPventur.sh
 # need root rights, fping and nmap
 # updated: 23.05.2020 mr.energy origin: Linux-User
+# Version 0.5
 #
 # Start without parameter - exit
 clear
@@ -22,7 +23,7 @@ echo Program nmap is installed!
 echo
 echo
 echo "Overview active network systems:"
-echo "(to get MAC addresses be in the same search network root)"
+echo "(to get MAC addresses, start the search network as root/sudo)"
 echo "--------------------------------------------------------------"
 echo
 date2=$(date +%d.%m.%Y-%H:%M:%S)
@@ -40,7 +41,7 @@ for k in $(fping -aq -g $1); do
 	echo "scanning...: $k"
 	echo "Online: $k" >> lanlist-$netO.txt
 	nmap -n -sP $k | awk '/Nmap scan report for/{printf $5;}/MAC Address:/{print " => "$3;}' | sort >> lanlist-$netO.txt
-	nmap $k | grep -B1 open >> lanlist-$netO.txt
+	nmap -A -T5 $k | grep -B1 open >> lanlist-$netO.txt
 	echo "---------------------------------------------------" >> lanlist-$netO.txt
 done
 echo "-------------------------------------------------------"
