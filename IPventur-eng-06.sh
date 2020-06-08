@@ -45,6 +45,7 @@ for k in $(fping -aq -g $1); do
 # -A Enable OS detection, version detection, script scanning, and tracerout, -T<0-5>: Set timing template (higher is faster) 
 	nmap -A -T5 $k | grep -B1 open >> lanlist-$netO.txt
 	echo "---------------------------------------------------" >> lanlist-$netO.txt
+echo >> lanlist-$net0.txt
 done
 echo "-------------------------------------------------------"
 echo "              E N D" >> lanlist-$netO.txt
