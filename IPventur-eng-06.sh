@@ -1,13 +1,15 @@
 #! /bin/sh
 # IPventur.sh
 # need root rights, fping and nmap
-# updated: 08.06.2020 mr.energy origin: Linux-User
+# updated: 08.06.2020 MrEnergy64 origin: Linux-User
 # Version: 0.6
 #
 # Start without parameter - exit
 clear
 if [ -z $1 ]; then
+	echo 
 	echo "NETWORK/CIDR (e.g. 192.168.0.0/24) is needed!"
+	echo "(Example: sudo ./IPventur-eng-06.sh 10.0.0.0/23 [Enter])"
 	exit
 fi
 clear
@@ -45,7 +47,6 @@ for k in $(fping -aq -g $1); do
 # -A Enable OS detection, version detection, script scanning, and tracerout, -T<0-5>: Set timing template (higher is faster) 
 	nmap -A -T5 $k | grep -B1 open >> lanlist-$netO.txt
 	echo "---------------------------------------------------" >> lanlist-$netO.txt
-echo >> lanlist-$net0.txt
 done
 echo "-------------------------------------------------------"
 echo "              E N D" >> lanlist-$netO.txt
