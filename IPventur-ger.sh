@@ -42,7 +42,7 @@ for k in $(fping -aq -g $1); do
 	echo "wird untersucht: $k"
 	echo "Aktiv: $k" >> lanliste-$netz.txt
 	nmap -n -sP $k | awk '/Nmap scan report for/{printf $5;}/MAC Address:/{print " => "$3;}' | sort >> lanliste-$netz.txt
-	nmap -A -T5 $k | grep -B1 open >> lanliste-$netz.txt
+	nmap $k | grep -B1 open >> lanliste-$netz.txt
 	echo "---------------------------------------------------" >> lanliste-$netz.txt
 done
 echo "-------------------------------------------------------"
