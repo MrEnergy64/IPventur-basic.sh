@@ -41,7 +41,7 @@ for k in $(fping -aq -g $1); do
 	echo "scanning...: $k"
 	echo "Online: $k" >> lanlist-$netO.txt
 	nmap -n -sP $k | awk '/Nmap scan report for/{printf $5;}/MAC Address:/{print " => "$3;}' | sort >> lanlist-$netO.txt
-	nmap -A -T5 $k | grep -B1 open >> lanlist-$netO.txt
+	nmap $k | grep -B1 open >> lanlist-$netO.txt
 	echo "---------------------------------------------------" >> lanlist-$netO.txt
 done
 echo "-------------------------------------------------------"
