@@ -7,7 +7,7 @@ chmod +x IPventur-eng.sh (or chmod +x IPventur-ger.sh)
 
 sudo ./IPventur-eng.sh 192.168.1.0/24 <=network example (German version IPventur-ger.sh)
 
-(new english version start with "sudo ./IPventur-eng-06.sh 192.168.1.0/24"
+(new 0.6 version start with "sudo ./IPventur-eng-06.sh 192.168.1.0/24 or sudo ./IPventur-ger-06.sh 192.168.1.0/24"
 
 The script will check first, if nmap and fping available, and when yes, it will starts with the investigation.
 
