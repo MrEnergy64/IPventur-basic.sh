@@ -1,7 +1,7 @@
 #! /bin/sh
 # IPventur.sh
 # need root rights, fping and nmap
-# updated: 23.05.2020 mr.energy origin: Linux-User
+# updated: 08.06.2020 mr.energy origin: Linux-User
 # Version: 0.6
 #
 # Start without parameter - exit
