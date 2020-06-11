@@ -2,6 +2,11 @@ Version 0.5 origin start script IPventur-eng.sh amd IPventur-ger.sh with standar
 
 Version 0.6 IPventur-eng-06.sh/IPventur-ger-06.sh - give more comments in the script and extend nmap
             parameters to -A -T5 and add Vendor ID's to the MAC address output
+
+Version 0.7 - change it from sh to bash script
+            - added date to the output file
+            - rename script to IPventur-eng-basic.sh (or IPventur-ger-basic.sh)
+            - minor style changes
             
 
 Note: if you would like to get more scan details or different output formats, use IPventur-Pro!
